@@ -38,6 +38,7 @@ export default {
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     background: var(--button-bg);
+    cursor: pointer;
     &:hover {
         border-color:var(--border-color-hover);
     }

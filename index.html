@@ -24,10 +24,15 @@ body {
 </head>
 <body>
 <div id=app>
-	<g-button icon="icon_telephone" icon-position="right" loading>Click</g-button>
-	<g-button icon="icon_telephone" :loading="true">Click</g-button>
-	<g-button>Click</g-button>
-    <g-icon name="icon_telephone" />
+	<g-button ke="1" icon="icon_telephone" icon-position="right" loading>Click</g-button>
+	<g-button ke="2" icon="icon_telephone" :loading="true">Click</g-button>
+    <g-button>Click3</g-button>
+    <g-button-group>
+        <g-button icon="icon_page_up">上一页</g-button>
+        <g-button>确定</g-button>
+        <g-button icon="icon_page_down" icon-position="right">下一页</g-button>
+
+    </g-button-group>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_2497327_q22dqaj9te.js"></script>
