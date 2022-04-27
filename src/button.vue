@@ -1,6 +1,7 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-        <g-icon class="icon" v-if="icon" :name="icon" />
+        <g-icon class="icon" v-if="icon && !loading" :name="icon" />
+        <g-icon class="loading icon" v-if="loading" name="icon_syn_gray_16" />
         <div class="content">
             <slot></slot>
         </div>
@@ -9,18 +10,24 @@
 <script>
 export default {
     props: {
-        icon: {},
+        icon: String,
         iconPosition: {
             type: String,
             default: "left",
             validator(value) {
                 return ["left", "right"].includes(value);
             }
-        }
+        },
+        loading: Boolean
     }
 }
 </script>
 <style lang="scss">
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 .g-button {
     display: inline-flex;
     align-items: center;
@@ -56,6 +63,9 @@ export default {
         > .content {
             order: 1;
         }
+    }
+    .loading {
+        animation: spin 2s infinite linear;
     }
 }
 </style>
