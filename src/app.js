@@ -16,6 +16,9 @@ new Vue({
 
 // test
 import chai from "chai";
+import spies from "chai-spies";
+chai.use(spies);
+
 const expect = chai.expect;
 const GButton = Vue.options.components["g-button"];
 {
@@ -79,11 +82,11 @@ const GButton = Vue.options.components["g-button"];
 {
     const gButton = new GButton();
     gButton.$mount();
-    gButton.$on("click", function(){
-        console.log("click");
-    })
+    const spy = chai.spy(function(){})
+    gButton.$on("click", spy);
     const button = gButton.$el;
     button.click();
+    expect(spy).to.have.been.called();
     gButton.$el.remove();
     gButton.$destroy();
 }
