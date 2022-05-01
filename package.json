@@ -4,6 +4,7 @@
   "description": "a vue ui lib",
   "main": "index.js",
   "scripts": {
+    "start": "parcel index.html --no-cache",
     "test": "rm -rf dist && parcel build test/* --no-cache --no-minify && karma start --single-run",
     "test-s": "karma start --single-run",
     "test-dev": "parcel watch test/* --no-cache & karma start"
