@@ -1,7 +1,7 @@
 {
-  "name": "gulu",
-  "version": "1.0.0",
-  "description": "",
+  "name": "zhyang-gulu",
+  "version": "0.0.1",
+  "description": "a vue ui lib",
   "main": "index.js",
   "scripts": {
     "test": "rm -rf dist && parcel build test/* --no-cache --no-minify && karma start --single-run",
