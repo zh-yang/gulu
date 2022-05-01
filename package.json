@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "rm -rf dist && parcel build test/* --no-cache --no-minify && karma start --single-run",
-    "test-s": "karma start --single-run"
-  },
+    "test-s": "karma start --single-run",
+    "test-dev": "parcel watch test/* --no-cache & karma start"
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zh-yang/gulu.git"
