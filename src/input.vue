@@ -1,6 +1,11 @@
 <template>
 <div class="warpper" :class="{error: error}">
-    <input :value="value" :disabled="disabled" :readonly="readonly" type="text">
+    <input
+        @change="$emit('change', $event)"
+        @focus="$emit('chanfocusge', $event)"
+        @blur="$emit('blur', $event)"
+        @input="$emit('input', $event)"
+    :value="value" :disabled="disabled" :readonly="readonly" type="text">
     <template v-if="error">
         <icon class="icon-error" name="icon_anomaly_red_16"></icon>
         <span class="error-message">{{error}}</span>

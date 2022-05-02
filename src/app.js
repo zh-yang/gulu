@@ -13,5 +13,10 @@ new Vue({
     el: "#app",
     data: {
         message: "hi"
+    },
+    methods: {
+        inputChange(e){
+            console.log(e, 1);
+        }
     }
 })
