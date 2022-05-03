@@ -1,5 +1,5 @@
 <template>
-<div class="col" :class="[`col-${span}`]">
+<div class="col" :class="[span&&`col-${span}`, offset&&`offset-${offset}`]" :style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}">
     <slot></slot>
 </div>
 </template>
@@ -7,7 +7,13 @@
 export default {
     name: "GuluCol",
     props: {
-        span: [Number, String]
+        span: [Number, String],
+        offset: [Number, String],
+    },
+    data() {
+        return {
+            gutter: undefined
+        }
     }
 }
 </script>
@@ -24,6 +30,12 @@ export default {
     @for $n from 1 through 24 {
         &.#{$class}#{$n} {
             width: $n/24 * 100%;
+        }
+    }
+    $class: offset-;
+    @for $n from 1 through 24 {
+        &.#{$class}#{$n} {
+            margin-left: $n/24 * 100%;
         }
     }
 }
