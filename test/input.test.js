@@ -1,5 +1,6 @@
-import { expect } from "chai";
+const expect = chai.expect;
 import Vue from "vue";
+// import sinon from "sinon";
 import Input from "../src/input";
 
 Vue.config.productionTip = false
@@ -15,8 +16,8 @@ describe("Input Test", ()=>{
     describe("props", ()=>{
         let vm;
         afterEach(()=>{
-            vm.$destroy();
             vm.$el.remove();
+            vm.$destroy();
         })
         it("接受 value", ()=>{
             vm = new Ctr({
@@ -64,13 +65,22 @@ describe("Input Test", ()=>{
     describe("events", ()=>{
         let vm;
         afterEach(()=>{
-            vm.$destroy();
             vm.$el.remove();
+            vm.$destroy();
         })
         
-        it("支持 change 事件", ()=>{
-            vm = new Ctr({}).$mount;
-            
+        it("支持 change/input/focus/blur 事件", ()=>{
+            vm = new Ctr({}).$mount();
+            const inputEl  = vm.$el.querySelector("input");
+            ["change", "input", "focus", "blur"].forEach((eventName)=>{
+                const callback = sinon.fake();
+                vm.$on(eventName, callback);
+                let event = new Event(eventName);
+                inputEl.dispatchEvent(event);
+
+                expect(callback).to.have.been.called;
+                expect(callback).to.have.been.calledWith(event);
+            })
         })
     })
 })

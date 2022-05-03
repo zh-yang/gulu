@@ -2,7 +2,7 @@
 <div class="warpper" :class="{error: error}">
     <input
         @change="$emit('change', $event)"
-        @focus="$emit('chanfocusge', $event)"
+        @focus="$emit('focus', $event)"
         @blur="$emit('blur', $event)"
         @input="$emit('input', $event)"
     :value="value" :disabled="disabled" :readonly="readonly" type="text">
