@@ -17,6 +17,7 @@ npm install --save zhyang-gulu
 import {Button, ButtonGroup, Icon} from "zhyang-gulu"
 ```
 ## 文档
+toast/dialog的区别
 
 ## 提问
 
