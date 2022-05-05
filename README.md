@@ -18,6 +18,7 @@ import {Button, ButtonGroup, Icon} from "zhyang-gulu"
 ```
 ## 文档
 toast/dialog的区别
+tab组件
 
 ## 提问
 
