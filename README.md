@@ -22,6 +22,7 @@ tab组件
 穿梭框场景分析
 按钮不可用与提示信息
 记录element-ui抽屉问题
+记录element-ui全局modal
 ## 提问
 
 ## 变更记录
