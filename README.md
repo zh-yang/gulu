@@ -23,6 +23,7 @@ tab组件
 按钮不可用与提示信息
 记录element-ui抽屉问题
 记录element-ui全局modal
+webpack同入口打包，状态统一
 ## 提问
 
 ## 变更记录
