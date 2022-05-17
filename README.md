@@ -26,6 +26,7 @@ tab组件
 webpack同入口打包，状态统一
 chai 单元测试异步报错
 编写可测试的组件
+element-ui scholler-bar组件
 ## 提问
 
 ## 变更记录
