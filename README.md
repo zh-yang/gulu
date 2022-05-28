@@ -35,6 +35,7 @@ popper.js
 vue 函数组件
 虚拟滚动实现？
 vxetable footer源码
+vue 使用中性能问题
 ## 提问
 
 ## 变更记录
