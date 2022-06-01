@@ -36,6 +36,8 @@ vue 函数组件
 虚拟滚动实现？
 vxetable footer源码
 vue 使用中性能问题
+对象冻结
+
 js 时间片
 ## 提问
 
